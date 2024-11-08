@@ -27,7 +27,7 @@ if uploaded_file is not None:
     prompt= processor.decode(out[0], skip_special_tokens=True)
     openai.api_key=api_key
     response=openai.Completion.create(
-  model="text-davinci-003",
+  model="gpt-3.5-turbo",
   prompt= 'You are strictly a social media caption generator that absolutely does not include any hashtags and quotation marks. Clearly label the captions "1.", "2." and "3.".\n Generate Caption for description: '+prompt,
     temperature=0.7,
     max_tokens=256
